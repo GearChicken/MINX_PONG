@@ -22,7 +22,7 @@
 using namespace MINX_PONG;
 using namespace MINX;
 
-Vector2 paddlePosition = Vector2(0,0);
+Point paddlePosition = Point(0,0);
 Pong::Pong()
 {
 	//This is the constructor. Put stuff here that should happen when the Game is created.
@@ -56,7 +56,6 @@ void Pong::UnloadContent()
 void Pong::Update(GameTime * gameTime)
 {
 	//Put stuff here to update the logic in your game each tick.
-	keyboard->Update(gameTime);
 	if(keyboard->getButton(SDLK_UP).state)
 	{
 		paddlePosition.Y--;
@@ -66,7 +65,7 @@ void Pong::Update(GameTime * gameTime)
 		paddlePosition.Y++;
 	}
 	cout << paddlePosition.Y << "\n";
-	SDL_Delay(10);
+	SDL_Delay(5);
 	Game::Update(gameTime);
 }
 
@@ -75,7 +74,7 @@ void Pong::Draw(GameTime * gameTime)
 
 	SDL_FillRect(gameWindow->screen, NULL, 0x000000);
 
-	Graphics::Primitives::drawRectangle(new Graphics::Color(255,255,255,0), 50, paddlePosition.Y, 100, 100, gameWindow->screen);
+	Graphics::Primitives::drawRectangle(new Graphics::Color(255,255,255,0), 50, paddlePosition.Y, 20, 100, gameWindow->screen);
 	
 	//Put stuff here to draw your game each frame.
 	Game::Draw(gameTime);

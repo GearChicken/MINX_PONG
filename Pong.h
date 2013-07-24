@@ -21,7 +21,7 @@
 #include "Input/Keyboard.h"
 #include "Game.h"
 #include "GameTime.h"
-#include "Vector2.h"
+#include "Point.h"
 #ifndef PONG_H_
 #define PONG_H_
 
