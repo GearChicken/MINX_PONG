@@ -117,13 +117,11 @@ void Pong::Update(GameTime * gameTime)
 		computerScore++;
 		ballPosition.Y = rand() % 140 + 100;
 		ballPosition.X = rand() % 200 + 220;
-		ballVelocity = Vector2(1,1);
 	}
 	if(ballPosition.X < 0){
 		playerScore++;
 		ballPosition.Y = rand() % 140 + 100;
 		ballPosition.X = rand() % 200 + 220;
-		ballVelocity = Vector2(1,1);	
 	}
 	paddlePosition.Y += paddleVelocity.Y;
 	paddle2Position.Y += paddle2Velocity.Y;
