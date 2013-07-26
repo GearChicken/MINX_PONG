@@ -91,11 +91,11 @@ void Pong::Update(GameTime * gameTime)
 	if(ballPosition.X < paddlePosition.X + 20 && ballPosition.X > paddlePosition.X && ballPosition.Y + 16 > paddlePosition.Y && ballPosition.Y < paddlePosition.Y + 100)
 	{
 		ballVelocity.X*=-1;
-		ballVelocity.Y += paddleVelocity.Y;
+		ballVelocity.Y += 0.1*paddleVelocity.Y;
 	}
 	if(ballPosition.X + 16 > paddle2Position.X && ballPosition.X + 16 < paddle2Position.X + 20 && ballPosition.Y + 16 > paddle2Position.Y && ballPosition.Y < paddle2Position.Y + 100)
 	{
-		ballVelocity.Y += paddle2Velocity.Y;
+		ballVelocity.Y += 0.1*paddle2Velocity.Y;
 		ballVelocity.X*=-1;
 	}
 	if(ballPosition.Y < 0 || ballPosition.Y > 464)
