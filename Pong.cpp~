@@ -23,7 +23,7 @@
 #include "Vector2.h"
 #include <string>
 #include <algorithm>
-#include <cmath>
+
 using namespace MINX_PONG;
 using namespace MINX;
 using namespace MINX::Graphics;
@@ -63,7 +63,7 @@ void drawScore(string scoreString, Point drawingPoint, GameWindow* gameWindow)
 void drawScores(GameWindow* gameWindow)
 {
 	drawScore(intToBinary(playerScore), Point(50,50), gameWindow);
-	drawScore(intToBinary(computerScore), Point(590,430), gameWindow);
+	drawScore(intToBinary(playerScore), Point(590,430), gameWindow);
 }
 Pong::Pong() : Game()
 {
@@ -160,10 +160,6 @@ void Pong::Update(GameTime * gameTime)
 	{
 		ballVelocity = ballVelocity.normalize();
 		ballVelocity = ballVelocity * 3;
-	}
-	if(abs(ballVelocity.X) < 1)
-	{
-		ballVelocity.X*=1.5;
 	}
 	paddlePosition.Y += paddleVelocity.Y;
 	paddle2Position.Y += paddle2Velocity.Y;
