@@ -23,7 +23,7 @@
 #include "Vector2.h"
 #include <string>
 #include <algorithm>
-
+#include <cmath>
 using namespace MINX_PONG;
 using namespace MINX;
 using namespace MINX::Graphics;
@@ -160,6 +160,10 @@ void Pong::Update(GameTime * gameTime)
 	{
 		ballVelocity = ballVelocity.normalize();
 		ballVelocity = ballVelocity * 3;
+	}
+	if(abs(ballVelocity.X) < 1)
+	{
+		ballVelocity.X*=1.5;
 	}
 	paddlePosition.Y += paddleVelocity.Y;
 	paddle2Position.Y += paddle2Velocity.Y;
