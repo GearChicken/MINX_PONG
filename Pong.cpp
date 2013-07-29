@@ -68,6 +68,7 @@ void drawScores(GameWindow* gameWindow)
 Pong::Pong() : Game()
 {
 	//This is the constructor. Put stuff here that should happen when the Game is created.
+	desiredFPS = 180;
 	isRunning = true;
 }
 
@@ -171,7 +172,6 @@ void Pong::Update(GameTime * gameTime)
 	ballPosition.Y += (int)ballVelocity.Y;
 	paddleVelocity.Y = 0;
 	paddle2Velocity.Y = 0;
-	SDL_Delay(5);
 	Game::Update(gameTime);
 }
 
