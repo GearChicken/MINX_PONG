@@ -23,4 +23,5 @@ int main(int argc, char ** argv)
 {
 	Pong * game = new Pong();
 	game->Run();
+	exit(0);
 }

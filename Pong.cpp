@@ -69,6 +69,7 @@ Pong::Pong() : Game()
 {
 	//This is the constructor. Put stuff here that should happen when the Game is created.
 	isRunning = true;
+	desiredFPS = 200;
 }
 
 void Pong::Initialize()
@@ -148,7 +149,7 @@ void Pong::Update(GameTime * gameTime)
 		playerScore++;
 		ballPosition.Y = rand() % 140 + 100;
 		ballPosition.X = rand() % 200 + 220;
-		ballVelocity = Vector2(1,1);
+		ballVelocity = Vector2(-1,-1);
 	}
 	if(ballPosition.X < 0){
 		computerScore++;
@@ -171,7 +172,6 @@ void Pong::Update(GameTime * gameTime)
 	ballPosition.Y += (int)ballVelocity.Y;
 	paddleVelocity.Y = 0;
 	paddle2Velocity.Y = 0;
-	SDL_Delay(5);
 	Game::Update(gameTime);
 }
 
