@@ -24,9 +24,11 @@
 #include <string>
 #include <algorithm>
 #include <cmath>
+#include <Input/Mouse.h>
 using namespace MINX_PONG;
 using namespace MINX;
 using namespace MINX::Graphics;
+using namespace MINX::Input;
 using namespace std;
 Point paddlePosition = Point(50,0);
 Vector2 paddleVelocity = Vector2(0,0);
@@ -34,6 +36,7 @@ Point paddle2Position = Point(590,0);
 Vector2 paddle2Velocity = Vector2(0,0);
 Point ballPosition = Point(320,240);
 Vector2 ballVelocity = Vector2(1,1);
+Mouse * mouse;
 int playerScore = 0;
 int computerScore = 0;
 Graphics::Color * white = new Graphics::Color(255,255,255,255);
@@ -70,6 +73,7 @@ Pong::Pong() : Game()
 	//This is the constructor. Put stuff here that should happen when the Game is created.
 	desiredFPS = 180;
 	isRunning = true;
+	desiredFPS = 200;
 }
 
 void Pong::Initialize()
@@ -77,6 +81,7 @@ void Pong::Initialize()
 	//Put stuff here that should happen when the Game is initialized.
 	
 	keyboard= new Input::Keyboard(this);
+	mouse = new Mouse(this);
 	paddle2Position.Y = rand() % 380;
 	ballPosition.Y = rand() % 140 + 100;
 	ballPosition.X = rand() % 200 + 220;
@@ -100,11 +105,11 @@ void Pong::UnloadContent()
 void Pong::Update(GameTime * gameTime)
 {
 	//Put stuff here to update the logic in your game each tick.
-	if(keyboard->getButton(SDLK_UP).state)
+	if(keyboard->getButton(SDLK_UP).state || mouse->getButton(4).state) //4 is scroll up
 	{
 		paddleVelocity.Y =-1;
 	}
-	if(keyboard->getButton(SDLK_DOWN).state)
+	if(keyboard->getButton(SDLK_DOWN).state || mouse->getButton(5).state) //5 is scroll down
 	{
 		paddleVelocity.Y =1;
 	}
@@ -149,7 +154,7 @@ void Pong::Update(GameTime * gameTime)
 		playerScore++;
 		ballPosition.Y = rand() % 140 + 100;
 		ballPosition.X = rand() % 200 + 220;
-		ballVelocity = Vector2(1,1);
+		ballVelocity = Vector2(-1,-1);
 	}
 	if(ballPosition.X < 0){
 		computerScore++;
