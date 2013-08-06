@@ -21,7 +21,10 @@
 #include <iostream>
 #include "Point.h"
 #include "Vector2.h"
+#include "Graphics/Font.h"
+#include "SDL/SDL_ttf.h"
 #include <string>
+#include <sstream>
 #include <algorithm>
 #include <cmath>
 #include <Input/Mouse.h>
@@ -30,6 +33,8 @@ using namespace MINX;
 using namespace MINX::Graphics;
 using namespace MINX::Input;
 using namespace std;
+
+TTF_Font* font;
 Point paddlePosition = Point(50,0);
 Vector2 paddleVelocity = Vector2(0,0);
 Point paddle2Position = Point(590,0);
@@ -40,6 +45,14 @@ Mouse * mouse;
 int playerScore = 0;
 int computerScore = 0;
 Graphics::Color * white = new Graphics::Color(255,255,255,255);
+
+string ToString(int val)
+{
+	stringstream ss;
+	ss << val;
+	return ss.str();
+}
+
 string intToBinary(int number)
 {
 	string result;
@@ -62,11 +75,6 @@ void drawScore(string scoreString, Point drawingPoint, GameWindow* gameWindow)
 			Graphics::Primitives::drawRectangle(white, drawingPoint.X + i*10, drawingPoint.Y, 5, 10, gameWindow->screen);
 		}
 	}
-}
-void drawScores(GameWindow* gameWindow)
-{
-	drawScore(intToBinary(playerScore), Point(50,50), gameWindow);
-	drawScore(intToBinary(computerScore), Point(590,430), gameWindow);
 }
 Pong::Pong() : Game()
 {
@@ -93,6 +101,7 @@ void Pong::Initialize()
 void Pong::LoadContent()
 {
 	//Put stuff here that loads content for your game.
+	font = content->loadTTFFont("Ubuntu-B.ttf", 24, "font");
 	Game::LoadContent();
 }
 
@@ -188,7 +197,9 @@ void Pong::Draw(GameTime * gameTime)
 	Graphics::Primitives::drawRectangle(white, paddlePosition.X, paddlePosition.Y, 20, 100, gameWindow->screen);
 	Graphics::Primitives::drawRectangle(white, ballPosition.X, ballPosition.Y, 16, 16, gameWindow->screen);
 	Graphics::Primitives::drawRectangle(white,paddle2Position.X, paddle2Position.Y, 20, 100, gameWindow->screen);
-	drawScores(gameWindow);
+	
+	DrawString(50,50, "Player Score: " + ToString(playerScore), gameWindow->screen, font);
+	DrawString(500,430, "Computer Score: " + ToString(computerScore), gameWindow->screen, font);
 	//Put stuff here to draw your game each frame.
 	Game::Draw(gameTime);
 }
