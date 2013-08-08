@@ -141,17 +141,20 @@ void Pong::Update(GameTime * gameTime)
 	{
 		ballVelocity.X*=-1;
 		ballVelocity.Y += paddleVelocity.Y/3;
+		collisionSound.setPosition(270,0);
 		collisionSound.play();
 	}
 	if(ballPosition.X + 16 > paddle2Position.X && ballPosition.X + 16 < paddle2Position.X + 20 && ballPosition.Y + 16 > paddle2Position.Y && ballPosition.Y < paddle2Position.Y + 100)
 	{
 		ballVelocity.Y += paddle2Velocity.Y/3;
 		ballVelocity.X*=-1;
+		collisionSound.setPosition(90,0);
 		collisionSound.play();
 	}
 	if(ballPosition.Y < 0 || ballPosition.Y > 464)
 	{
 		ballVelocity.Y*=-1;
+		collisionSound.setPosition(360+(ballPosition.X-320)*90/320,0);
 		collisionSound.play();
 	}
 	if(ballVelocity.X > 0)
