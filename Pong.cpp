@@ -17,6 +17,7 @@
 
 	*/
 #include "Graphics/GameWindow.h"
+#include "Audio/AudioClip.h"
 #include "Pong.h"
 #include <iostream>
 #include "Point.h"
@@ -32,9 +33,11 @@ using namespace MINX_PONG;
 using namespace MINX;
 using namespace MINX::Graphics;
 using namespace MINX::Input;
+using namespace MINX::Audio;
 using namespace std;
 
 TTF_Font* font;
+AudioClip collisionSound("ball.wav",false,false);
 Point paddlePosition = Point(50,0);
 Vector2 paddleVelocity = Vector2(0,0);
 Point paddle2Position = Point(590,0);
@@ -138,15 +141,18 @@ void Pong::Update(GameTime * gameTime)
 	{
 		ballVelocity.X*=-1;
 		ballVelocity.Y += paddleVelocity.Y/3;
+		collisionSound.play();
 	}
 	if(ballPosition.X + 16 > paddle2Position.X && ballPosition.X + 16 < paddle2Position.X + 20 && ballPosition.Y + 16 > paddle2Position.Y && ballPosition.Y < paddle2Position.Y + 100)
 	{
 		ballVelocity.Y += paddle2Velocity.Y/3;
 		ballVelocity.X*=-1;
+		collisionSound.play();
 	}
 	if(ballPosition.Y < 0 || ballPosition.Y > 464)
 	{
 		ballVelocity.Y*=-1;
+		collisionSound.play();
 	}
 	if(ballVelocity.X > 0)
 	{
