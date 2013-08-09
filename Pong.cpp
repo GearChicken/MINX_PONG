@@ -16,19 +16,13 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 	*/
-#include "Graphics/GameWindow.h"
-#include "Audio/AudioClip.h"
 #include "Pong.h"
 #include <iostream>
-#include "Point.h"
-#include "Vector2.h"
-#include "Graphics/Font.h"
 #include "SDL/SDL_ttf.h"
 #include <string>
 #include <sstream>
 #include <algorithm>
 #include <cmath>
-#include <Input/Mouse.h>
 using namespace MINX_PONG;
 using namespace MINX;
 using namespace MINX::Graphics;
@@ -91,7 +85,7 @@ void Pong::Initialize()
 {
 	//Put stuff here that should happen when the Game is initialized.
 	
-	keyboard= new Input::Keyboard(this);
+	keyboard= new Keyboard(this);
 	mouse = new Mouse(this);
 	paddle2Position.Y = rand() % 380;
 	ballPosition.Y = rand() % 140 + 100;
