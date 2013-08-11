@@ -18,11 +18,15 @@
 	*/
 #include "Pong.h"
 #include <iostream>
-#include "SDL/SDL_ttf.h"
 #include <string>
 #include <sstream>
 #include <algorithm>
 #include <cmath>
+#ifdef _WIN32
+#include <SDL_ttf.h>
+#else
+#include <SDL/SDL_ttf.h>
+#endif
 using namespace MINX_PONG;
 using namespace MINX;
 using namespace MINX::Graphics;

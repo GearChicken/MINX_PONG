@@ -1,0 +1,27 @@
+﻿Build started 8/10/2013 7:59:56 PM.
+     1>Project "c:\c++\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\MINX_PONG.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\c++\MINX_PONG\Debug\MINX_PONG.exe" /NOLOGO MINX.lib SDL.lib SDLmain.lib SDL_mixer.lib SDL_image.lib SDL_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\MINX_PONG.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\c++\MINX_PONG\Debug\MINX_PONG.pdb" /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\c++\MINX_PONG\Debug\MINX_PONG.lib" /MACHINE:X86 Debug\Pong.obj
+         Debug\Program.obj
+         MINX.lib(Primitives.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>MINX.lib(Primitives.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Game.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Mouse.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Keyboard.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Content.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Vector2.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(AudioClip.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(IGenericHID.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Font.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(GameComponent.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>MINX.lib(Texture2D.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in Pong.obj
+     1>c:\c++\MINX_PONG\Debug\MINX_PONG.exe : fatal error LNK1319: 11 mismatches detected
+     1>Done Building Project "c:\c++\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.30

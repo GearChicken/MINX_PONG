@@ -1,0 +1,15 @@
+﻿Build started 8/10/2013 8:00:02 PM.
+     1>Project "c:\c++\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\MINX_PONG.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\c++\MINX_PONG\Release\MINX_PONG.exe" /NOLOGO MINX.libSDL.lib SDLmain.lib SDL_mixer.lib SDL_image.lib SDL_ttf.lib MINX.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\MINX_PONG.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"c:\c++\MINX_PONG\Release\MINX_PONG.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"main" /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\c++\MINX_PONG\Release\MINX_PONG.lib" /MACHINE:X86 Release\Pong.obj
+         Release\Program.obj
+     1>LINK : fatal error LNK1104: cannot open file 'c:\c++\MINX_PONG\Release\MINX_PONG.exe'
+     1>Done Building Project "c:\c++\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.09
