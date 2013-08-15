@@ -15,16 +15,32 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Pong.cpp">
+    <ClCompile Include="..\src\Pong.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Program.cpp">
+    <ClCompile Include="..\src\Program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Pong.h">
+    <ClInclude Include="..\src\Pong.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MINX_PONG.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ball.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Ubuntu-B.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

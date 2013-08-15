@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{33CB31DA-52D7-4E4F-A9FA-583795DEB05A}</ProjectGuid>
+    <ProjectGuid>{0A8FBE8E-D743-44B4-99D6-EB8472BE962A}</ProjectGuid>
     <RootNamespace>MINX_PONG</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -19,14 +19,12 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -39,29 +37,23 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>c:\c++\MINX\headers;c:\SDL\SDL_image-devel-1.2.12-VC\SDL_image-1.2.12\include;c:\SDL\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\include;c:\SDL\SDL_mixer-devel-1.2.12-VC\SDL_mixer-1.2.12\include;c:\sdl\SDL-devel-1.2.15-VC\SDL-1.2.15\include;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>c:\c++\MINX\Debug;c:\SDL\SDL_image-devel-1.2.12-VC\SDL_image-1.2.12\lib\x86;c:\SDL\SDL_mixer-devel-1.2.12-VC\SDL_mixer-1.2.12\lib\x86;c:\SDL\SDL-devel-1.2.15-VC\SDL-1.2.15\lib\x86;c:\SDL\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\c++\MINX\headers;c:\sdl\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\include;c:\sdl\SDL_mixer-devel-1.2.12-VC\SDL_mixer-1.2.12\include;c:\sdl\SDL_image-devel-1.2.12-VC\SDL_image-1.2.12\include;c:\sdl\SDL-devel-1.2.15-VC\SDL-1.2.15\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>c:\c++\MINX\headers;c:\SDL\SDL_image-devel-1.2.12-VC\SDL_image-1.2.12\include;c:\SDL\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\include;c:\SDL\SDL_mixer-devel-1.2.12-VC\SDL_mixer-1.2.12\include;c:\sdl\SDL-devel-1.2.15-VC\SDL-1.2.15\include;$(IncludePath)</IncludePath>
-    <LibraryPath>c:\c++\MINX\release;c:\SDL\SDL_image-devel-1.2.12-VC\SDL_image-1.2.12\lib\x86;c:\SDL\SDL_mixer-devel-1.2.12-VC\SDL_mixer-1.2.12\lib\x86;c:\SDL\SDL-devel-1.2.15-VC\SDL-1.2.15\lib\x86;c:\SDL\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>c:\c++\MINX\headers;c:\sdl\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\include;c:\sdl\SDL_mixer-devel-1.2.12-VC\SDL_mixer-1.2.12\include;c:\sdl\SDL_image-devel-1.2.12-VC\SDL_image-1.2.12\include;c:\sdl\SDL-devel-1.2.15-VC\SDL-1.2.15\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <AdditionalIncludeDirectories>C:\c++\MINX\headers</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>
-      </AdditionalLibraryDirectories>
-      <AdditionalDependencies>MINX.lib;SDL.lib;SDLmain.lib;SDL_mixer.lib;SDL_image.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>c:\c++\MINX\Debug;c:\sdl\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\lib\x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>minx.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>mainFunc</EntryPointSymbol>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -70,22 +62,31 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>C:\c++\MINX\headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>MINX.libSDL.lib;SDLmain.lib;SDL_mixer.lib;SDL_image.lib;SDL_ttf.lib;MINX.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>c:\c++\MINX\Release;c:\sdl\SDL_ttf-devel-2.0.11-VC\SDL_ttf-2.0.11\lib\x86</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainFunc</EntryPointSymbol>
+      <AdditionalDependencies>minx.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Pong.cpp" />
-    <ClCompile Include="..\Program.cpp" />
+    <ClCompile Include="..\src\Pong.cpp" />
+    <ClCompile Include="..\src\Program.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Pong.h" />
+    <ClInclude Include="..\src\Pong.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MINX_PONG.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ball.wav" />
+    <None Include="Ubuntu-B.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
