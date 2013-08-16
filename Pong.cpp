@@ -17,6 +17,12 @@
 
 	*/
 #include "Pong.h"
+#include "Input/Mouse.h"
+#include "Content.h"
+#include "Point.h"
+#include "Vector2.h"
+#include "Graphics/Font.h"
+#include "Audio/AudioClip.h"
 #include <iostream>
 #include "SDL/SDL_ttf.h"
 #include <string>
@@ -84,13 +90,12 @@ Pong::Pong() : Game()
 void Pong::Initialize()
 {
 	//Put stuff here that should happen when the Game is initialized.
-	
-	keyboard= new Keyboard(this);
+	Game::Initialize();
 	mouse = new Mouse(this);
+	keyboard= new Keyboard(this);
 	paddle2Position.Y = rand() % 380;
 	ballPosition.Y = rand() % 140 + 100;
 	ballPosition.X = rand() % 200 + 220;
-	Game::Initialize();
 
 	SDL_WM_SetCaption("MINX Pong", "MINX Pong");
 }
@@ -98,8 +103,8 @@ void Pong::Initialize()
 void Pong::LoadContent()
 {
 	//Put stuff here that loads content for your game.
-	font = content->loadTTFFont("Ubuntu-B.ttf", 24, "font");
 	Game::LoadContent();
+	font = content->loadTTFFont("Ubuntu-B.ttf", 24, "font");
 }
 
 void Pong::UnloadContent()
@@ -111,22 +116,25 @@ void Pong::UnloadContent()
 void Pong::Update(GameTime * gameTime)
 {
 	//Put stuff here to update the logic in your game each tick.
-	if(keyboard->getButton(SDLK_UP).state || mouse->getButton(4).state) //4 is scroll up
+	if(keyboard->getButton(SDLK_UP).state) //4 is scroll up
 	{
 		paddleVelocity.Y =-1;
-	}
-	if(keyboard->getButton(SDLK_DOWN).state || mouse->getButton(5).state) //5 is scroll down
+	} else if(keyboard->getButton(SDLK_DOWN).state) //5 is scroll down
 	{
 		paddleVelocity.Y =1;
+	} else if(mouse->getAxis(3).val != 0)
+	{
+		cout << mouse->getAxis(3).val;
+		paddlePosition.Y = mouse->getAxis(1).val - 50;
 	}
-	if(paddlePosition.Y < 5)
+	/*if(paddlePosition.Y < 5)
 	{
 		paddlePosition.Y = 5;
 	}
 	if(paddlePosition.Y > 380)
 	{
 		paddlePosition.Y = 380;
-	}
+	}*/
 	if(paddle2Position.Y > 375)
 	{
 		paddle2Position.Y = 375;

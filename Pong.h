@@ -20,7 +20,9 @@
 #ifndef PONG_H_
 #define PONG_H_
 
-#include <MINX/MINX.h>
+#include "Game.h"
+#include "GameTime.h"
+#include "Input/Keyboard.h"
 using namespace MINX;
 
 namespace MINX_PONG
