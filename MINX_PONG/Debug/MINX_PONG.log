@@ -1,0 +1,19 @@
+﻿Build started 8/15/2013 4:15:49 PM.
+     1>Project "C:\c++\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\MINX_PONG.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       ResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         MINX_PONG.vcxproj -> C:\c++\MINX_PONG\Debug\MINX_PONG.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\MINX_PONG.unsuccessfulbuild".
+         Touching "Debug\MINX_PONG.lastbuildstate".
+     1>Done Building Project "C:\c++\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.03
