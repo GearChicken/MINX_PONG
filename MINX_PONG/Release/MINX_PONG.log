@@ -1,15 +1,17 @@
-﻿Build started 8/26/2013 11:11:16 AM.
+﻿Build started 8/26/2013 1:13:50 PM.
      1>Project "Z:\MINX\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
-         Touching "Release\MINX_PONG.unsuccessfulbuild".
+         Creating "Release\MINX_PONG.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Pong.cpp ..\src\Program.cpp
-         Pong.cpp
-     1>z:\minx\minx_pong\src\Pong.h(23): fatal error C1083: Cannot open include file: 'Game.h': No such file or directory
-         Program.cpp
-     1>c1xx : fatal error C1083: Cannot open source file: '..\src\Program.cpp': No such file or directory
-     1>Done Building Project "Z:\MINX\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" (build target(s)) -- FAILED.
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         MINX_PONG.vcxproj -> Z:\MINX\MINX_PONG\Release\MINX_PONG.exe
+       FinalizeBuildStatus:
+         Deleting file "Release\MINX_PONG.unsuccessfulbuild".
+         Touching "Release\MINX_PONG.lastbuildstate".
+     1>Done Building Project "Z:\MINX\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" (build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.81
+Time Elapsed 00:00:00.49
