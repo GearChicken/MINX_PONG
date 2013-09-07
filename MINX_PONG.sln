@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MINX_PONG", "MINX_PONG\MINX_PONG.vcxproj", "{0A8FBE8E-D743-44B4-99D6-EB8472BE962A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MINX", "..\MINX\MINX\MINX.vcxproj", "{5C37CA4E-6617-45DB-829C-705875C53E97}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,10 +13,6 @@ Global
 		{0A8FBE8E-D743-44B4-99D6-EB8472BE962A}.Debug|Win32.Build.0 = Debug|Win32
 		{0A8FBE8E-D743-44B4-99D6-EB8472BE962A}.Release|Win32.ActiveCfg = Release|Win32
 		{0A8FBE8E-D743-44B4-99D6-EB8472BE962A}.Release|Win32.Build.0 = Release|Win32
-		{5C37CA4E-6617-45DB-829C-705875C53E97}.Debug|Win32.ActiveCfg = Debug|Win32
-		{5C37CA4E-6617-45DB-829C-705875C53E97}.Debug|Win32.Build.0 = Debug|Win32
-		{5C37CA4E-6617-45DB-829C-705875C53E97}.Release|Win32.ActiveCfg = Release|Win32
-		{5C37CA4E-6617-45DB-829C-705875C53E97}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

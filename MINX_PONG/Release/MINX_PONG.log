@@ -1,23 +1,20 @@
-﻿Build started 9/4/2013 1:00:44 PM.
+﻿Build started 9/7/2013 5:52:39 PM.
      1>Project "Z:\MINX\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Pong.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\src\Pong.cpp
          Pong.cpp
+     1>..\src\Pong.cpp(202): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
      1>..\src\Pong.cpp(203): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>..\src\Pong.cpp(204): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\MINX\MINX_PONG\Release\MINX_PONG.exe" /NOLOGO /LIBPATH:..\..\MINX\Release /LIBPATH:..\..\MINX\lib SDL_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\MINX_PONG.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Z:\MINX\MINX_PONG\Release\MINX_PONG.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"mainFunc" /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\MINX\MINX_PONG\Release\MINX_PONG.lib" /MACHINE:X86 Release\Pong.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\MINX\MINX_PONG\Release\MINX_PONG.exe" /NOLOGO /LIBPATH:..\..\MINX\Release /LIBPATH:..\..\MINX\lib MINX.lib SDL2_ttf.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Z:\MINX\MINX_PONG\Release\MINX_PONG.pdb" /SUBSYSTEM:WINDOWS /OPT:REF /OPT:ICF /LTCG /TLBID:1 /ENTRY:"mainFunc" /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\MINX\MINX_PONG\Release\MINX_PONG.lib" /MACHINE:X86 /SAFESEH Release\Pong.obj
          Release\Program.obj
-         Z:\MINX\MINX_PONG\Release\MINX.lib
          Generating code
          Finished generating code
-     1>CIL library( CIL module) : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
-     1>MSVCRT.lib(cpu_disp.obj) : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>Pong.obj : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
+     1>MSVCRT.lib(atonexit.obj) : warning LNK4210: .CRT section exists; there may be unhandled static initializers or terminators
          MINX_PONG.vcxproj -> Z:\MINX\MINX_PONG\Release\MINX_PONG.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Z:\MINX\MINX_PONG\Release\MINX_PONG.exe;#1" /manifest Release\MINX_PONG.exe.intermediate.manifest
      1>Done Building Project "Z:\MINX\MINX_PONG\MINX_PONG\MINX_PONG.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:05.33
+Time Elapsed 00:00:06.27
